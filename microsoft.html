@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Lemon Company</title>
+        <style>
+            /* CSS for the webpage */
+            body {
+                background-color: #f9f9f9;
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+            header {
+                background-color: #ffcc00;
+                padding: 20px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .logo {
+                font-size: 24px;
+                font-weight: bold;
+            }
+            .tabs {
+                display: flex;
+                gap: 20px;
+            }
+            .tab {
+                cursor: pointer;
+            }
+            .toggle-theme {
+                cursor: pointer;
+            }
+            .content {
+                padding: 20px;
+            }
+            .image {
+                max-width: 100%;
+            }
+            footer {
+                background-color: #333;
+                color: #fff;
+                text-align: center;
+                padding: 10px;
+            }
+            .form-section {
+                margin-top: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="logo">Lemon Co.</div>
+            <div class="tabs">
+                <div class="tab">Home</div>
+                <div class="tab">Products</div>
+            </div>
+            <div class="toggle-theme">Toggle Theme</div>
+        </header>
+        <div class="content">
+            <h1>Welcome to Lemon Co.</h1>
+            <img class="image" src="lemon.jpg" alt="Lemon" />
+            <p>
+                We provide fresh and zesty lemons for all your culinary needs.
+            </p>
+            <h2>Our Services</h2>
+            <p>From lemonade to lemon desserts, we've got you covered.</p>
+            <div class="form-section">
+                <h3>Contact Us</h3>
+                <form>
+                    <input type="text" placeholder="Name" />
+                    <input type="email" placeholder="Email" />
+                    <textarea placeholder="Message"></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+        <footer>© 2023 Lemon Co. All rights reserved.</footer>
+        <script>
+            // JavaScript for theme toggle (optional)
+            const toggleThemeButton = document.querySelector('.toggle-theme');
+            const body = document.body;
+            let isDarkTheme = false;
+
+            toggleThemeButton.addEventListener('click', () => {
+                isDarkTheme = !isDarkTheme;
+                body.style.backgroundColor = isDarkTheme ? '#333' : '#f9f9f9';
+                body.style.color = isDarkTheme ? '#fff' : '#000';
+            });
+        </script>
+    </body>
+</html>

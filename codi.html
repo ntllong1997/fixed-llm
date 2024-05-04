@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lemon Company</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #ffc107;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        .services {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+
+        .search-bar {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .form-section {
+            margin-top: 20px;
+        }
+
+        .form-section h2 {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div>
+            <h1>Lemon Company</h1>
+        </div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Products</a>
+            <button onclick="toggleTheme()">Toggle Theme</button>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="services">
+            <div>
+                <h2>Our Services</h2>
+                <p>Discover the refreshing taste of our lemon products.</p>
+                <p>Explore our wide range of lemon-based drinks and foods.</p>
+            </div>
+            <img src="lemon-image.jpg" alt="Lemon Image" style="width: 200px;">
+        </div>
+
+        <input type="text" class="search-bar" placeholder="Search...">
+
+        <div class="details">
+            <h2>Product Details</h2>
+            <p>Learn more about our organic lemons sourced locally.</p>
+        </div>
+
+        <div class="form-section">
+            <h2>Contact Us</h2>
+            <form>
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name"><br><br>
+
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email"><br><br>
+
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="4"></textarea><br><br>
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2022 Lemon Company. All rights reserved.
+    </footer>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle("dark-theme");
+        }
+    </script>
+</body>
+
+</html>

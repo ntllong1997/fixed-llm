@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sunnyvale Lemons</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-image: url('images/lemon-background.jpg');
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                color: #333;
+            }
+
+            header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 20px;
+                background-color: rgba(255, 255, 255, 0.8);
+            }
+
+            h1 {
+                font-size: 2.5em;
+                margin: 0;
+            }
+
+            nav ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            nav li {
+                display: inline-block;
+                margin-right: 20px;
+            }
+
+            a {
+                text-decoration: none;
+                color: #333;
+            }
+
+            #theme-toggle {
+                background-color: #f1f1f1;
+                border: none;
+                padding: 5px 10px;
+                cursor: pointer;
+            }
+
+            #search {
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                margin-left: 20px;
+            }
+
+            main {
+                padding: 50px;
+            }
+
+            section {
+                margin-bottom: 50px;
+            }
+
+            h2,
+            h3 {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            img {
+                max-width: 100%;
+            }
+
+            .product-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 20px;
+            }
+
+            .product {
+                background-color: #fff;
+                padding: 20px;
+                border-radius: 5px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            }
+
+            footer {
+                padding: 20px;
+                text-align: center;
+                background-color: #f1f1f1;
+            }
+
+            #contact-form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+
+            label {
+                font-weight: bold;
+            }
+
+            textarea {
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+
+            button[type='submit'] {
+                background-color: #333;
+                color: #fff;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Sunnyvale Lemons</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><button id="theme-toggle">Light Theme</button></li>
+                </ul>
+            </nav>
+            <input
+                type="text"
+                id="search"
+                placeholder="Search our products..."
+            />
+        </header>
+        <main>
+            <section id="home">
+                <img src="images/lemon-grove.jpg" alt="A vibrant lemon grove" />
+                <h2>Sunshine in Every Bite</h2>
+                <p>
+                    Sunnyvale Lemons brings you the freshest, juiciest lemons
+                    grown under the California sun. From zesty fruits perfect
+                    for baking to plump, tart lemons ideal for lemonade, we have
+                    everything to brighten your day and your recipes.
+                </p>
+            </section>
+            <section id="products">
+                <h3>Our Citrusy Delights</h3>
+                <div class="product-grid">
+                    <div class="product">
+                        <img src="images/lemon.jpg" alt="A single lemon" />
+                        <h4>Fresh Lemons</h4>
+                        <p>
+                            Our classic, sun-ripened lemons are perfect for
+                            adding a vibrant touch to any dish.
+                        </p>
+                        <button>Learn More</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2024 Sunnyvale Lemons. All rights reserved.</p>
+            <form id="contact-form">
+                <h4>Contact Us</h4>
+                <label for="name">Name:</label>
+                <input type="text" id="name" required />
+                <label for="email">Email:</label>
+                <input type="email" id="email" required />
+                <label for="message">Message:</label>
+                <textarea id="message" rows="5"></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </footer>
+        <script>
+            const themeToggle = document.getElementById('theme-toggle');
+
+            themeToggle.addEventListener('click', function () {
+                const body = document.body;
+                body.classList.toggle('light-theme'); // Add a class for light theme styles
+            });
+        </script>
+    </body>
+</html>

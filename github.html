@@ -1,0 +1,68 @@
+g src="lemon-image.jpg" alt="Lemon Image"><!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                transition: background-color 0.5s;
+            }
+            .dark-theme {
+                background-color: #444;
+                color: white;
+            }
+            .light-theme {
+                background-color: #fff;
+                color: black;
+            }
+            header {
+                display: flex;
+                justify-content: space-between;
+                padding: 20px;
+                background-color: #f0f0f0;
+            }
+            header a {
+                margin-right: 20px;
+            }
+            footer {
+                padding: 20px;
+                background-color: #f0f0f0;
+            }
+            img {
+                max-width: 100%;
+            }
+        </style>
+    </head>
+    <body class="light-theme">
+        <header>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">Products</a>
+            </nav>
+            <button id="themeToggle">Toggle Theme</button>
+        </header>
+        <main>
+            <img src="lemon-image.jpg" alt="Lemon Image" />
+            <h1>Our Services</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <input type="search" placeholder="Search..." />
+        </main>
+        <footer>
+            <p>&copy; 2022 Lemon Company</p>
+            <form>
+                <label for="name">Name:</label><br />
+                <input type="text" id="name" name="name" /><br />
+                <label for="email">Email:</label><br />
+                <input type="email" id="email" name="email" /><br />
+                <input type="submit" value="Submit" />
+            </form>
+        </footer>
+        <script>
+            document
+                .getElementById('themeToggle')
+                .addEventListener('click', function () {
+                    document.body.classList.toggle('dark-theme');
+                    document.body.classList.toggle('light-theme');
+                });
+        </script>
+    </body>
+</html>
