@@ -8,28 +8,33 @@
             body {
                 font-family: Arial, sans-serif;
                 background-color: #ffefa0;
-                color: #333;
+                color: #333; /* Dark text color */
                 text-align: center;
             }
+
             .header {
                 background-color: #ffdb58;
-                color: #fff;
+                color: #333; /* Dark text color */
                 padding: 20px;
             }
+
             .header a {
-                color: #ffffff;
+                color: #333; /* Dark text color */
                 margin: 0 15px;
                 text-decoration: none;
             }
+
             #theme-toggle {
                 cursor: pointer;
             }
+
             .content {
                 padding: 20px;
             }
+
             .footer {
                 background-color: #ffdb58;
-                color: #fff;
+                color: #333; /* Dark text color */
                 padding: 20px;
                 position: fixed;
                 bottom: 0;
@@ -38,7 +43,7 @@
 
             .dark-mode {
                 background-color: #333;
-                color: #fff;
+                color: #fff; /* Light text color */
             }
         </style>
     </head>
@@ -57,6 +62,7 @@
                 lemons to your doorstep. Enjoy the convenience and taste of
                 fresh lemons for all your cooking and juicing needs.
             </p>
+            <label for="search">Search:</label>
             <input type="search" placeholder="Search our site..." />
         </div>
 
@@ -65,9 +71,15 @@
             <div>
                 <h4>Contact Us</h4>
                 <form>
-                    Name: <input type="text" /><br />
-                    Email: <input type="email" /><br />
-                    Message: <textarea></textarea><br />
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" /><br />
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" /><br />
+
+                    <label for="message">Message:</label>
+                    <textarea id="message"></textarea><br />
+
                     <button type="submit">Send</button>
                 </form>
             </div>
